@@ -19,19 +19,22 @@ function App() {
   }, []);
 
   return (<>
-    <h1>Intial Render</h1>
-    <ul>
-      {
-        users.map(user=>(<li key={user.id}>
-          Name: {user.name} <br></br>
-          Username: {user.username}<br></br>
-          Email: {user.email}<br></br>
-          Address<br></br>
-          City:{user.address.city}
-
-        </li>))
-      }
-    </ul>
+    <div className='container mt-5'>
+      <h1>User Dashboard</h1>
+      <div className='row'>
+      {users.map(user => (
+                <div className="col-md-4 mb-4" key={user.id}>
+                    <div className="card">
+                        <div className="card-body">
+                            <h5 className="card-title">{user.name}</h5>
+                            <h6 className="card-subtitle mb-2 text-muted">@{user.username}</h6>
+                            <button className="btn btn-primary" onClick={() => showModal(user)}>View Details</button>
+                            </div>
+                    </div>
+                </div>
+            ))}
+      </div>
+    </div>
   </>);
 
 }
