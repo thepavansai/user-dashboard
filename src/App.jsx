@@ -45,8 +45,8 @@ function App() {
   return (
     <>
       <div className="app-container" tyle={{ fontFamily: 'Verdana, sans-serif' }}>
-      <center><h1>User Dashboard</h1></center>
         <div className='container mt-5'>
+          <center><h1>User Dashboard</h1></center>
           <input
             type="text"
             className="form-control mb-3"
